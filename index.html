@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Ligação 457</title>
+<style>
+    body {
+        background: #000;
+        color: #0f0;
+        font-family: monospace;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        text-align: center;
+    }
+    input {
+        font-size: 20px;
+        padding: 10px;
+        text-align: center;
+        width: 100px;
+        margin-top: 10px;
+    }
+    button {
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+</style>
+</head>
+<body>
+<h2>Digite o código para iniciar a chamada</h2>
+
+<input id="codigo" maxlength="3" placeholder="---">
+<button onclick="verificar()">Confirmar</button>
+
+<audio id="audio" src="audio.mp3"></audio>
+
+<script>
+function verificar() {
+    const valor = document.getElementById("codigo").value;
+    if (valor === "457") {
+        document.getElementById("audio").play();
+    } else {
+        alert("Código incorreto.");
+    }
+}
+</script>
+
+</body>
+</html>
